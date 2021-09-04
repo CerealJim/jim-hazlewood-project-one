@@ -1,1 +1,1 @@
-# jim-hazlewood-project-one
+# jimHazlewoodProjectOne
