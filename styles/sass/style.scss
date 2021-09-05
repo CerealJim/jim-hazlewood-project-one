@@ -1,1 +1,295 @@
+
+// Normalize import
 @import 'normalize';
+
+
+// variables import
+@import 'variables';
+
+
+/* ========================================
+TYPOGRAPHY
+======================================== */
+
+html {
+	font-family: $mainFontFamily;
+	font-size: 125%; /* setting font-size default to 20px*/
+	line-height: 1.5;
+}
+
+
+h1, h2, h3, h4, li, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  font-size: 4.16rem;  //83.2px
+  font-weight: bold;
+  letter-spacing: 0.13rem;  //2.6px
+  line-height: 4.735rem;  //94.7px
+}
+
+.logo {
+  font-family: $bigHeadingFontFamily;
+  font-weight: normal;
+  color: $orangeColor;
+  font-size: 13.07rem;  //261.4px
+  letter-spacing: 0.12rem;  //2.4px
+  display:block;
+}
+
+h2, h3 {
+  font-size: 3.4rem;  //68px
+  letter-spacing: 0.11rem;  //2.2px
+  line-height: 2.9rem;  //85px
+}
+
+p {
+  font-size: 1.95rem;  //39px
+  line-height: 1.5rem;  //30px
+  letter-spacing: 0.095rem; //1.9px
+}
+
+a {
+  font-size: 1.9rem; //38px
+  font-weight: bold;
+  line-height: 1.45rem;  //29px
+  letter-spacing: 0.095rem; //1.9px
+}
+
+ul li .navLogo {
+  font-family: $bigHeadingFontFamily;
+  font-size: 3.4rem;  //68px
+  font-weight: normal;
+}
+
+
+/* ========================================
+GENERAL STYLES
+======================================== */
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+//button general styles
+button {
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+
+//list general styles
+ul {
+  list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none; 
+}
+
+//text general styles
+h1, h2, h3, h4, li, p, a {
+  color: $primaryFontColor;
+}
+
+/* ||||||||||  INDEX.HTML ||||||||||| */
+/* ========================================
+HEADER - INDEX, CONTACT & BLOG
+======================================== */
+
+
+.headerHome {
+  background-image: url(../assets/home-image-1.jpg);
+  background-repeat: no-repeat;
+  background-position:top left;
+	background-size:cover;
+	width: 100%;
+  height:70vh;
+  z-index: -10;
+  position:relative
+}
+
+.headerBlog {
+  background-image: url(../assets/blog-header-1.jpg);
+  background-repeat: no-repeat;
+  background-position:top left;
+	background-size:cover;
+	width: 100%;
+  height:70vh;
+  z-index: -10;
+  position:relative
+}
+
+.headerContact {
+  background-image: url(../assets/contact-header-1.jpg);
+  background-repeat: no-repeat;
+  background-position:top left;
+	background-size:cover;
+	width: 100%;
+  height:70vh;
+  z-index: -10;
+  position:relative
+}
+
+.headerContent {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:100%;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.nav {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0; //40px  top and bottom
+}
+
+.navHome:first-child {
+  color: $orangeColor;
+}
+
+.navblog:nth-last-child(2) {
+  color: $orangeColor;
+}
+
+.navcontact:last-child {
+  color: $orangeColor;
+}
+
+.nav a {
+  padding: 0 2rem; //40px left and right
+}
+
+.headerH1Container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin: 1rem;
+}
+
+.headerImage {
+  background-image: url(../assets/header-box.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: absolute;
+  bottom: -10vh;
+  right: 0;
+  height:40vh;
+	width: 50%;
+  z-index: -5;
+}
+
+
+
+/* ========================================
+ABOUT SECTION - INDEX
+======================================== */
+
+
+
+/* ========================================
+BLOG SECTION - INDEX & BLOG
+======================================== */
+
+
+
+/* ========================================
+HOST PARTY SECTION - INDEX
+======================================== */
+
+
+
+/* ========================================
+EVENTS SECTION - INDEX
+======================================== */
+
+
+
+/* ========================================
+GALLERY SECTION - INDEX
+======================================== */
+
+
+
+/* ========================================
+FOOTER SECTION - INDEX, CONTACT & BLOG
+======================================== */
+
+
+
+/* ||||||||||  BLOG.HTML SPECIFIC ||||||||||| */
+/* ========================================
+BLOG PAGE - ASIDE & PRIMARY BLOG SECTION
+======================================== */
+
+
+
+/* ========================================
+BLOG PAGE - BLOG COMMENTS AND FORM
+======================================== */
+
+
+/* ||  CONTACT.HTML   */
+
+
+/* ========================================
+===========================================
+MEDIA QUERIES - Desktop first to mobile
+===========================================
+======================================== */
+
+//responsive design for small desktop screens
+@media (max-width: 940px) {
+
+
+
+}
+
+//responsive design for tablets
+@media (max-width: 768px) {
+}
+
+
+//responsive design for phones
+@media (max-width: 480px) {
+  //navigation transition to hamburger
+  .topNav {
+    display: none;
+  }
+  .mobileNav {
+    display: contents;
+  }
+
+  .mobileNav .nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav a {
+    padding: 2rem 0; //20px top and bottom
+  }
+
+  .headerImage {
+    display:none;
+  }
+
+  .headerH1Container {
+    text-align: center;
+  }
+}

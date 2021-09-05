@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&family=Tulpen+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <title>Home</title>
 </head>
 <body>
@@ -17,25 +17,32 @@
   <Header class="headerHome">
 
     <!-- Wrapper to contain content -->
-    <div class="wrapper">
+    <div class="wrapper headerContent">
 
       <!-- Navigation of site -->
-
-
-      <nav class="topBarHome">
-				<ul class="nav navigation">
+      <nav class="topNav topNavHome">
+				<ul class="nav navHome">
 					<li><a href="./index.html">Home</a></li>
 					<li><a href="./index.html#about">About</a></li>
-					<li><h2>Bar-One</h2></li>
+          <li><a href="./index.html"><span class="navLogo">Bar-One</span></a></li>
           <li><a href="./blog.html">Blog</a></li>
           <li><a href="./contact.html">Contact</a></li>
 				</ul>
 			</nav>
+      <nav class="mobileNav">
+				<ul class="nav">
+          <li><a href="./index.html"><span class="navLogo">Bar-One</span></a></li>
+					<li><a href="#home"><span class="fas fa-bars"></span></a></li>
+				</ul>
+			</nav>
 
       <!-- Headline - Home Page -->
-      <h1><span class="logo">Bar-One</span> Place to be</h1>
-      <div class="headerImage"></div>
-    
+      <div class="headerH1Container">
+        <h1><span class="logo">Bar-One</span> Place to be</h1>
+        <div class="headerImage"></div>
+      </div>
+
+
     </div>
 
   </Header>
@@ -45,40 +52,40 @@
       <!-- About Section -->
       <section id="about" class="about">
         <div class="wrapper">
-          <ul>
-            <li>
+          <ul class="aboutHome">
+            <li class="aboutItems aboutItem1">
               <div>
                 <span class="fas fa-home"></span>
               </div>
               <div>
-                <h3>New space</h3>
+                <h2>New space</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ut voluptatibus quos maiores. Officia quibusdam doloribus unde molestias accusantium harum vero eaque consequatur, architecto corrupti doloremque, nesciunt culpa, voluptas est!</p>
               </div>
             </li>
-            <li>
+            <li class="aboutItems aboutItem2">
               <div>
                 <span class="fas fa-users"></span>
               </div>
               <div>
-                <h3>Community</h3>
+                <h2>Community</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ut voluptatibus quos maiores. Officia quibusdam doloribus unde molestias accusantium harum vero eaque consequatur, architecto corrupti doloremque, nesciunt culpa, voluptas est!</p>
               </div>
             </li>
-            <li>
+            <li class="aboutItems aboutItem3">
               <div>
                 <span class="fas fa-file"></span>
               </div>
               <div>
-                <h3>NBlog</h3>
+                <h2>Blog</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ut voluptatibus quos maiores. Officia quibusdam doloribus unde molestias accusantium harum vero eaque consequatur, architecto corrupti doloremque, nesciunt culpa, voluptas est!</p>
               </div>
             </li>
-            <li>
+            <li class="aboutItems aboutItem4">
               <div>
                 <span class="fas fa-phone"></span>
               </div>
               <div>
-                <h3>Get in Touch</h3>
+                <h2>Get in Touch</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos ut voluptatibus quos maiores. Officia quibusdam doloribus unde molestias accusantium harum vero eaque consequatur, architecto corrupti doloremque, nesciunt culpa, voluptas est!</p>
               </div>
             </li>
@@ -96,7 +103,7 @@
             </div>
             <div class="articleContents articleContent1">
               <div class="articlePositioning1">
-                <h3>New locations</h3>
+                <h2>New locations</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dolores porro unde accusantium autem velit. </p>
                 <button>Read more</button>
               </div>
@@ -108,7 +115,7 @@
             </div>
             <div class="articleContents articleContent2">
               <div class="articlePositioning2">
-                <h3>Plan ahead</h3>
+                <h2>Plan ahead</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dolores porro unde accusantium autem velit. </p>
                 <button>Read more</button>
               </div>
@@ -122,7 +129,7 @@
       <section id="hostParty" class="about">
         <div class="wrapper">
           <div class="aboutContentWrapper">
-            <h3>Want to host a party?</h3>
+            <h2>Want to host a party?</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet corporis cumque dolores assumenda, sunt ex inventore excepturi. Itaque quos provident, minima est distinctio dolore commodi beatae fugiat cupiditate, repellat quasi?</p>
             <button>Find out more</button>
           </div>

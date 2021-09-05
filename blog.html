@@ -7,29 +7,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&family=Tulpen+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <title>Blog</title>
 </head>
 <body>
   <!-- Header of page -->
-  <Header class="blogHome">
+  <Header class="headerBlog">
 
     <!-- Wrapper to contain content -->
-    <div class="wrapper">
+    <div class="wrapper headerContent">
 
       <!-- Navigation of site -->
-      <nav class="topBarBlog">
-				<ul class="nav navigation">
+      <nav class="topNav topNavBlog">
+				<ul class="nav navBlog">
 					<li><a href="./index.html">Home</a></li>
 					<li><a href="./index.html#about">About</a></li>
-					<li><h2>Bar-One</h2></li>
+          <li><a href="./index.html"><span class="navLogo">Bar-One</span></a></li>
           <li><a href="./blog.html">Blog</a></li>
           <li><a href="./contact.html">Contact</a></li>
 				</ul>
 			</nav>
+      <nav class="mobileNav">
+				<ul class="nav">
+          <li><a href="./index.html"><span class="navLogo">Bar-One</span></a></li>
+					<li><a href="#home"><span class="fas fa-bars"></span></a></li>
+				</ul>
+			</nav>
 
       <!-- Headline - Home Page -->
-      <h1 class="headerBlog">Blog</h1>
+      <h1 class="subPageH1">Blog</h1>
 
     </div>
   </Header>
@@ -45,12 +51,12 @@
             <div class="asideContainer">
               <div class="blogAsideImg"></div>
               <div class="blogMission">
-                <h3>Our mission</h3>
+                <h2>Our mission</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis quae et facilis deleniti explicabo?</p>
                 <p><a href="#home"><span class="textColor">Find out more</span></a></p>
               </div>
               <div class="blogRecentPosts">
-                <h3>Recent Posts</h3>
+                <h2>Recent Posts</h2>
                 <ul>
                   <li>
                     <p>Lorem ipsum dolor sit amet.</p>
@@ -76,7 +82,7 @@
               <img src="./assets/post-image.jpg" alt="Several plates of food including a full salad, sandwich and appitizer">
             </div>
             <div class="blogWrapper">
-              <h3>New menu!</h3>
+              <h2>New menu!</h2>
               <p class="textColor">Monday January 30, 2019 by Saron</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore culpa error aliquam eos nulla iusto! Expedita est mollitia incidunt commodi?</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi delectus eum veritatis a suscipit corporis sequi cumque esse maiores consequatur? Modi tempore magni aperiam odit molestias quidem animi dolor! Hic?</p>
@@ -90,13 +96,13 @@
 
     <!-- Section with blog comments -->
     <section class="blogComments">
-      <h3>Comments:</h3>
+      <h2>Comments:</h2>
       <div class="BlogComment commentOne">
         <div class="commentOnePic">
           <img src="./assets/comment-image-1.jpg" alt="Profile picture of a woman with hoop earings, red lipstick and a white tank top">
         </div>
         <div class="commentOneContent">
-          <h4><span class="textColor">Tuesday October 9th, 2019 by Sulaire</span></h4>
+          <h3><span class="textColor">Tuesday October 9th, 2019 by Sulaire</span></h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dolores porro unde accusantium autem velit, corporis ab laborum fugit rem eaque aspernatur ut fuga in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. .</p>
         </div>
       </div>
@@ -105,7 +111,7 @@
           <img src="./assets/comment-image-2.jpg" alt="Profile picture of a bearded man stroking hand through his hair at the top of his head">
         </div>
         <div class="commentTwoContent">
-          <h4><span class="textColor">Wednesday October 10th, 2019 by Renzo</span></h4>
+          <h3><span class="textColor">Wednesday October 10th, 2019 by Renzo</span></h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dolores porro unde accusantium autem velit, corporis ab laborum fugit rem eaque aspernatur ut fuga in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. .</p>
         </div>
       </div>
