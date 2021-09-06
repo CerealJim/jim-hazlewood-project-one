@@ -324,37 +324,24 @@ h1, h2, h3, h4, li, p, a {
 /* ========================================
 HEADER - INDEX, CONTACT & BLOG
 ======================================== */
-.headerHome {
-  background-image: url(../assets/home-image-1.jpg);
+header {
   background-repeat: no-repeat;
-  background-position: top left;
   background-size: cover;
   width: 100%;
   height: 70vh;
-  z-index: -10;
   position: relative;
+}
+
+.headerHome {
+  background-image: url(../assets/home-image-1.jpg);
 }
 
 .headerBlog {
   background-image: url(../assets/blog-header-1.jpg);
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  width: 100%;
-  height: 70vh;
-  z-index: -10;
-  position: relative;
 }
 
 .headerContact {
   background-image: url(../assets/contact-header-1.jpg);
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  width: 100%;
-  height: 70vh;
-  z-index: -10;
-  position: relative;
 }
 
 .headerContent {
@@ -368,6 +355,7 @@ HEADER - INDEX, CONTACT & BLOG
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 2rem 0;
   height: 100%;
 }
 
@@ -385,23 +373,23 @@ HEADER - INDEX, CONTACT & BLOG
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0;
 }
 
-.navHome:first-child {
+.navHome li:first-of-type a {
   color: #FF8327;
 }
 
-.navblog:nth-last-child(2) {
+.navBlog li:nth-last-child(2) a {
   color: #FF8327;
 }
 
-.navcontact:last-child {
+.navContact li:last-child a {
   color: #FF8327;
 }
 
 .nav a {
   padding: 0 2rem;
+  text-transform: uppercase;
 }
 
 .headerH1Container {
@@ -411,11 +399,16 @@ HEADER - INDEX, CONTACT & BLOG
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: left;
   margin: 1rem;
+}
+
+h1 {
+  z-index: 10;
+}
+
+h1 span {
+  margin: -0.35rem;
+  line-height: 7rem;
 }
 
 .headerImage {
@@ -426,14 +419,56 @@ HEADER - INDEX, CONTACT & BLOG
   position: absolute;
   bottom: -10vh;
   right: 0;
-  height: 40vh;
+  height: 50vh;
   width: 50%;
-  z-index: -5;
+  z-index: 5;
 }
 
 /* ========================================
 ABOUT SECTION - INDEX
 ======================================== */
+.about {
+  background-color: #111010;
+  z-index: -10;
+  padding: 150px 0;
+}
+
+.aboutHome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.aboutItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 0;
+  width: 50%;
+}
+
+.aboutItems span:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #BF2603;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin-top: 0.25rem;
+  margin-right: 0.5rem;
+}
+
 /* ========================================
 BLOG SECTION - INDEX & BLOG
 ======================================== */
