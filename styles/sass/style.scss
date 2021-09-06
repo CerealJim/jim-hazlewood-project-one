@@ -65,6 +65,12 @@ ul li .navLogo {
   font-weight: normal;
 }
 
+button {
+	font-family: $bigHeadingFontFamily;
+  color: $primaryFontColor;
+  font-weight: normal;
+}
+
 
 /* ========================================
 GENERAL STYLES
@@ -79,8 +85,11 @@ GENERAL STYLES
 //button general styles
 button {
 	font-size: 1.25rem;
-	font-weight: bold;
+  letter-spacing: 0.05rem; //1px
 	text-transform: capitalize;
+  background-color: $redColor;
+  padding: .25rem 1.5rem;
+
 }
 
 
@@ -98,6 +107,11 @@ a {
 //text general styles
 h1, h2, h3, h4, li, p, a {
   color: $primaryFontColor;
+}
+
+img {
+  max-width: 100%;
+  height: 100%
 }
 
 /* ||||||||||  INDEX.HTML ||||||||||| */
@@ -121,10 +135,12 @@ header {
 
 .headerBlog {
   background-image: url(../assets/blog-header-1.jpg);
+  background-position: center;
 }
 
 .headerContact {
   background-image: url(../assets/contact-header-1.jpg);
+  background-position: center;
 }
 
 .headerContent {
@@ -141,8 +157,9 @@ header {
 
 .nav {
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 15%;
 
 }
 
@@ -159,8 +176,14 @@ header {
 }
 
 .nav a {
-  padding: 0 2rem; //40px left and right
+  padding: 0 .5rem; //10px left and right
   text-transform: uppercase;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
+  border-bottom: 2px solid $orangeColor;
 }
 
 .headerH1Container {
@@ -176,6 +199,10 @@ h1 {
 h1 span{
   margin: -.35rem;  //7px
   line-height: 7rem;  //140px
+}
+
+.subPageH1 {
+  padding-bottom: 20vh;
 }
 
 
@@ -233,6 +260,47 @@ ABOUT SECTION - INDEX
 BLOG SECTION - INDEX & BLOG
 ======================================== */
 
+.blog {
+  background-color: $secondaryBackgroundColor;
+}
+
+.articlesContainer {
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.articlePics {
+  width: calc(50%);
+  background-color: $orangeColor;
+  position: relative;
+}
+
+.articleContents {
+  width: calc(50%);
+}
+
+
+
+.articlesLeftSide {
+  // margin-right: 1rem;
+}
+
+.articlesRightSide {
+  // margin-left: 1rem;
+}
+
+.articlePics img {
+  // position: absolute;
+  // top:0;
+  // left:0;
+}
+
+.articleContents {
+  width:50%;
+}
+
+
+
 
 
 /* ========================================
@@ -283,19 +351,24 @@ MEDIA QUERIES - Desktop first to mobile
 //responsive design for small desktop screens
 @media (max-width: 940px) {
 
-
+  //navigation
+  .nav {
+    margin: 0;
+  }
 
 }
 
 //responsive design for tablets
 @media (max-width: 768px) {
-}
 
 
-//responsive design for phones
-@media (max-width: 480px) {
   //navigation transition to hamburger
-  .topNav {
+
+  .headerContent {
+    padding-bottom: 0;
+  }
+
+  .desktopNav {
     display: none;
   }
   .mobileNav {
@@ -306,17 +379,54 @@ MEDIA QUERIES - Desktop first to mobile
     display:flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+  }
+
+  .nav a:hover,
+  .nav a:focus,
+  .nav a:active {
+    border-bottom: none;
   }
 
   .nav a {
     padding: 2rem 0; //20px top and bottom
   }
 
-  .headerImage {
-    display:none;
-  }
+
 
   .headerH1Container {
     text-align: center;
   }
+
+  h1 span {
+    line-height: 10rem;
+  }
+
+
+  //about sections
+  .aboutItems {
+    width: 100%;
+  }
+
+}
+
+
+//responsive design for phones
+@media (max-width: 480px) {
+
+
+  // header section
+  header {
+    height:100vh;
+  }
+  .headerImage {
+    display:none;
+  }
+  
+
+//about sections
+  .about {
+    padding: 50px 0;
+  }
+
 }

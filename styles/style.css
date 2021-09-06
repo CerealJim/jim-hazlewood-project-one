@@ -291,6 +291,12 @@ ul li .navLogo {
   font-weight: normal;
 }
 
+button {
+  font-family: "Tulpen One", cursive;
+  color: #FFFFFF;
+  font-weight: normal;
+}
+
 /* ========================================
 GENERAL STYLES
 ======================================== */
@@ -302,8 +308,10 @@ GENERAL STYLES
 
 button {
   font-size: 1.25rem;
-  font-weight: bold;
+  letter-spacing: 0.05rem;
   text-transform: capitalize;
+  background-color: #BF2603;
+  padding: 0.25rem 1.5rem;
 }
 
 ul {
@@ -318,6 +326,11 @@ a {
 
 h1, h2, h3, h4, li, p, a {
   color: #FFFFFF;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
 }
 
 /* ||||||||||  INDEX.HTML ||||||||||| */
@@ -338,10 +351,12 @@ header {
 
 .headerBlog {
   background-image: url(../assets/blog-header-1.jpg);
+  background-position: center;
 }
 
 .headerContact {
   background-image: url(../assets/contact-header-1.jpg);
+  background-position: center;
 }
 
 .headerContent {
@@ -367,12 +382,13 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 15%;
 }
 
 .navHome li:first-of-type a {
@@ -388,8 +404,14 @@ header {
 }
 
 .nav a {
-  padding: 0 2rem;
+  padding: 0 0.5rem;
   text-transform: uppercase;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
+  border-bottom: 2px solid #FF8327;
 }
 
 .headerH1Container {
@@ -409,6 +431,10 @@ h1 {
 h1 span {
   margin: -0.35rem;
   line-height: 7rem;
+}
+
+.subPageH1 {
+  padding-bottom: 20vh;
 }
 
 .headerImage {
@@ -472,6 +498,34 @@ ABOUT SECTION - INDEX
 /* ========================================
 BLOG SECTION - INDEX & BLOG
 ======================================== */
+.blog {
+  background-color: #220303;
+}
+
+.articlesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.articlePics {
+  width: calc(50%);
+  background-color: #FF8327;
+  position: relative;
+}
+
+.articleContents {
+  width: calc(50%);
+}
+
+.articleContents {
+  width: 50%;
+}
+
 /* ========================================
 HOST PARTY SECTION - INDEX
 ======================================== */
@@ -497,8 +551,17 @@ BLOG PAGE - BLOG COMMENTS AND FORM
 MEDIA QUERIES - Desktop first to mobile
 ===========================================
 ======================================== */
-@media (max-width: 480px) {
-  .topNav {
+@media (max-width: 940px) {
+  .nav {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  .headerContent {
+    padding-bottom: 0;
+  }
+
+  .desktopNav {
     display: none;
   }
 
@@ -516,17 +579,41 @@ MEDIA QUERIES - Desktop first to mobile
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0;
+  }
+
+  .nav a:hover,
+.nav a:focus,
+.nav a:active {
+    border-bottom: none;
   }
 
   .nav a {
     padding: 2rem 0;
   }
 
+  .headerH1Container {
+    text-align: center;
+  }
+
+  h1 span {
+    line-height: 10rem;
+  }
+
+  .aboutItems {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    height: 100vh;
+  }
+
   .headerImage {
     display: none;
   }
 
-  .headerH1Container {
-    text-align: center;
+  .about {
+    padding: 50px 0;
   }
 }
