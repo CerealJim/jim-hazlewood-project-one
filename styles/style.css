@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -266,10 +267,16 @@ h1 {
   display: block;
 }
 
-h2, h3 {
+h2 {
   font-size: 3.4rem;
   letter-spacing: 0.11rem;
   line-height: 2.9rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+  letter-spacing: 0.11rem;
+  line-height: 0.5;
 }
 
 p {
@@ -306,7 +313,7 @@ GENERAL STYLES
   margin: 0 auto;
 }
 
-.outterWrapper {
+.outerWrapper {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -685,9 +692,81 @@ footer {
 /* ========================================
 BLOG PAGE - ASIDE & PRIMARY BLOG SECTION
 ======================================== */
+.blogBackground {
+  background-color: #111010;
+}
+
+.blogContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.asideContainer {
+  background-color: #220303;
+  margin-top: 8rem;
+  padding: 19rem 1.5rem 1.5rem;
+  margin-right: 4rem;
+  position: relative;
+}
+
+.blogAsideImg {
+  background-image: url(../assets/sidebar-image.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  height: 19rem;
+  width: 19rem;
+  margin-left: -6rem;
+}
+
+.newMenuBorder {
+  padding-left: 5rem;
+  padding-bottom: 5rem;
+  border-left: 1px solid #FF8327;
+  border-bottom: 1px solid #FF8327;
+}
+
+.blogRecentPosts p::before {
+  content: "●";
+  font-size: 1rem;
+  color: red;
+  margin: 0 0.25rem;
+}
+
 /* ========================================
 BLOG PAGE - BLOG COMMENTS AND FORM
 ======================================== */
+.blogComments {
+  padding-left: 4rem;
+  padding-top: 4rem;
+}
+
+.blogComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 0;
+}
+
+.commentPic {
+  width: 45%;
+  height: 4.5rem;
+  margin-right: 1rem;
+}
+
+.textColor {
+  color: #FF8327;
+  display: block;
+  padding-bottom: 1rem;
+}
+
 /* ||  CONTACT.HTML   */
 /* ========================================
 ===========================================

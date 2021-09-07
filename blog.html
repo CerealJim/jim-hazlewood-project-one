@@ -40,48 +40,50 @@
     </div>
   </header>
 
-  <main>
+  <main class="blogBackground">
     <!-- Wrapper to contain content -->
     <div class="wrapper">
       <!-- Container to flex aside and section content -->
       <div class="blogContainer">
         <!-- Aside with mission and recent blog posts -->
         <aside>
-          <div class="blogWrapper">    
-            <div class="asideContainer">
-              <div class="blogAsideImg"></div>
-              <div class="blogMission">
-                <h2>Our mission</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis quae et facilis deleniti explicabo?</p>
-                <p><a href="#home"><span class="textColor">Find out more</span></a></p>
-              </div>
-              <div class="blogRecentPosts">
-                <h2>Recent Posts</h2>
-                <ul>
-                  <li>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                  </li>
-                  <li>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                  </li>
-                  <li>
-                    <p>Lorem ipsum dolor sit.</p>
-                  </li>
-                  <li>
-                    <p>Lorem, ipsum dolor.</p>
-                  </li>
-                </ul>
+
+            <div class="blogWrapper">    
+              <div class="asideContainer">
+                <div class="blogAsideImg"></div>
+                <div class="blogMission">
+                  <h2>Our mission</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis quae et facilis deleniti explicabo?</p>
+                  <p><a href="#home"><span class="textColor">Find out more</span></a></p>
+                </div>
+                <div class="blogRecentPosts">
+                  <h2>Recent Posts</h2>
+                  <ul>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet.</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet.</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit.</p>
+                    </li>
+                    <li>
+                      <p>Lorem, ipsum dolor.</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+
         </aside>
         <!-- Section with primary blog content -->
-        <section class="newMenu">
-          <div class="newMenuContainer">
+        <div class="blogSection">
+          <section class="newMenu">
             <div class="newMenuImg">
               <img src="./assets/post-image.jpg" alt="Several plates of food including a full salad, sandwich and appitizer">
             </div>
-            <div class="blogWrapper">
+            <div class="newMenuBorder">
               <h2>New menu!</h2>
               <p class="textColor">Monday January 30, 2019 by Saron</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore culpa error aliquam eos nulla iusto! Expedita est mollitia incidunt commodi?</p>
@@ -89,54 +91,55 @@
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel veritatis culpa nesciunt minima facilis nihil incidunt deserunt autem, ex, ab nulla quo minus quod qui perspiciatis consequuntur esse aspernatur! Illum eum possimus magnam id? Necessitatibus ipsum ratione maiores praesentium illo.</p>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur cum veniam soluta odio nam maiores?</p>
             </div>
-          </div> 
-        </section>
+          </section>
+          
+          <!-- Section with blog comments -->
+          <section class="blogComments">
+            <h2>Comments:</h2>
+            <div class="blogComment commentOne">
+              <div class="commentOnePic commentPic">
+                <img src="./assets/comment-image-1.jpg" alt="Profile picture of a woman with hoop earings, red lipstick and a white tank top">
+              </div>
+              <div class="commentOneContent commentContent">
+                <h3><span class="textColor">Tuesday October 9th, 2019 by Sulaire</span></h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dolores porro unde accusantium autem velit, corporis ab laborum fugit rem eaque aspernatur ut fuga in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. .</p>
+              </div>
+            </div>
+            <div class="blogComment commentTwo">
+              <div class="commentTwoPic commentPic">
+                <img src="./assets/comment-image-2.jpg" alt="Profile picture of a bearded man stroking hand through his hair at the top of his head">
+              </div>
+              <div class="commentTwoContent commentComment">
+                <h3><span class="textColor">Wednesday October 10th, 2019 by Renzo</span></h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dolores porro unde accusantium autem velit, corporis ab laborum fugit rem eaque aspernatur ut fuga in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. .</p>
+              </div>
+            </div>
+
+            <!-- Form inside the blog comments section -->
+            <form action="#" method="#" class="contactBlogForm" name="contactBlogForm">
+              <div class="form-top">
+                <div class="name">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name">
+                </div>
+                <div class="email">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email">
+                </div>
+              </div>
+              <div class="form-bottom">
+                <label for="comment">Message:</label>
+                <div class="text-area">
+                  <textarea type="text" id="comment"></textarea>
+                </div>
+              </div>
+              <button type="submit">Post Comment</button>
+            </form]>
+          </section>
+        </div>
       </div>
     </div>
 
-    <!-- Section with blog comments -->
-    <section class="blogComments">
-      <h2>Comments:</h2>
-      <div class="BlogComment commentOne">
-        <div class="commentOnePic">
-          <img src="./assets/comment-image-1.jpg" alt="Profile picture of a woman with hoop earings, red lipstick and a white tank top">
-        </div>
-        <div class="commentOneContent">
-          <h3><span class="textColor">Tuesday October 9th, 2019 by Sulaire</span></h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dolores porro unde accusantium autem velit, corporis ab laborum fugit rem eaque aspernatur ut fuga in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. .</p>
-        </div>
-      </div>
-      <div class="BlogComment commentTwo">
-        <div class="commentTwoPic">
-          <img src="./assets/comment-image-2.jpg" alt="Profile picture of a bearded man stroking hand through his hair at the top of his head">
-        </div>
-        <div class="commentTwoContent">
-          <h3><span class="textColor">Wednesday October 10th, 2019 by Renzo</span></h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas dolores porro unde accusantium autem velit, corporis ab laborum fugit rem eaque aspernatur ut fuga in. Lorem ipsum dolor, sit amet consectetur adipisicing elit. .</p>
-        </div>
-      </div>
-
-      <!-- Form inside the blog comments section -->
-      <form action="#" method="#" class="contactBlogForm" name="contactBlogForm">
-        <div class="form-top">
-          <div class="name">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-          </div>
-          <div class="email">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-          </div>
-        </div>
-        <div class="form-bottom">
-          <label for="comment">Message:</label>
-          <div class="text-area">
-            <textarea type="text" id="comment"></textarea>
-          </div>
-        </div>
-        <button type="submit">Post Comment</button>
-      </form]>
-    </section>
   </main>
   
 <!-- footer Section -->
