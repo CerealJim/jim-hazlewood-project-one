@@ -710,7 +710,7 @@ BLOG PAGE - ASIDE & PRIMARY BLOG SECTION
   background-color: #220303;
   margin-top: 8rem;
   padding: 19rem 1.5rem 1.5rem;
-  margin-right: 4rem;
+  margin-right: 3rem;
   position: relative;
 }
 
@@ -765,6 +765,65 @@ BLOG PAGE - BLOG COMMENTS AND FORM
   color: #FF8327;
   display: block;
   padding-bottom: 1rem;
+}
+
+.contactBlogForm {
+  padding-bottom: 5rem;
+}
+
+.form-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFFFFF;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+form label {
+  font-size: 1.95rem;
+  margin-left: 2rem;
+}
+
+form button {
+  width: 100%;
+}
+
+.formInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48%;
+}
+
+input[type=text],
+input[type=email] {
+  color: #FFFFFF;
+  background-color: #111010;
+  border: none;
+  border-bottom: 2px solid #FF8327;
+}
+
+.form-bottom textarea {
+  padding: 1rem;
+  color: #FFFFFF;
+  width: 100%;
+  height: 8rem;
+  line-height: 1.5;
+  resize: none;
+  background-color: #111010;
+  border: 2px solid #FF8327;
+}
+
+.form-bottom textarea[placeholder=comment] {
+  color: #FFFFFF;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 
 /* ||  CONTACT.HTML   */

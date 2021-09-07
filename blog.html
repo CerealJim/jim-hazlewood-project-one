@@ -46,36 +46,32 @@
       <!-- Container to flex aside and section content -->
       <div class="blogContainer">
         <!-- Aside with mission and recent blog posts -->
-        <aside>
-
-            <div class="blogWrapper">    
-              <div class="asideContainer">
-                <div class="blogAsideImg"></div>
-                <div class="blogMission">
-                  <h2>Our mission</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis quae et facilis deleniti explicabo?</p>
-                  <p><a href="#home"><span class="textColor">Find out more</span></a></p>
-                </div>
-                <div class="blogRecentPosts">
-                  <h2>Recent Posts</h2>
-                  <ul>
-                    <li>
-                      <p>Lorem ipsum dolor sit amet.</p>
-                    </li>
-                    <li>
-                      <p>Lorem ipsum dolor sit amet.</p>
-                    </li>
-                    <li>
-                      <p>Lorem ipsum dolor sit.</p>
-                    </li>
-                    <li>
-                      <p>Lorem, ipsum dolor.</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+        <aside class="asideContainer">
+          <div class="asideContainerBackground">
+            <div class="blogAsideImg"></div>
+            <div class="blogMission">
+              <h2>Our mission</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis quae et facilis deleniti explicabo?</p>
+              <p><a href="#home"><span class="textColor">Find out more</span></a></p>
             </div>
-
+            <div class="blogRecentPosts">
+              <h2>Recent Posts</h2>
+              <ul>
+                <li>
+                  <p>Lorem ipsum dolor sit.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit.</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit.</p>
+                </li>
+                <li>
+                  <p>Lorem, ipsum dolor.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </aside>
         <!-- Section with primary blog content -->
         <div class="blogSection">
@@ -118,11 +114,11 @@
             <!-- Form inside the blog comments section -->
             <form action="#" method="#" class="contactBlogForm" name="contactBlogForm">
               <div class="form-top">
-                <div class="name">
+                <div class="name formInput">
                   <label for="name">Name:</label>
                   <input type="text" id="name" name="name">
                 </div>
-                <div class="email">
+                <div class="email formInput">
                   <label for="email">Email:</label>
                   <input type="email" id="email" name="email">
                 </div>
@@ -130,7 +126,7 @@
               <div class="form-bottom">
                 <label for="comment">Message:</label>
                 <div class="text-area">
-                  <textarea type="text" id="comment"></textarea>
+                  <textarea type="text" id="comment" placeholder="Comment"></textarea>
                 </div>
               </div>
               <button type="submit">Post Comment</button>
