@@ -7,6 +7,8 @@
 @import 'variables';
 
 
+
+
 /* ========================================
 TYPOGRAPHY
 ======================================== */
@@ -89,7 +91,7 @@ GENERAL STYLES
 
 .outerWrapper {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -274,24 +276,13 @@ BLOG SECTION - INDEX & BLOG
 ======================================== */
 
 .blog {
-  background-color: $backgroundColor;
-  z-index: -10;
+  background-color: $secondaryBackgroundColor;
 }
-
-.articlePic1 {
-  background-image: url(../assets/left-image.jpg);
-}
-
-.articlePic2 {
-  background-image: url(../assets/right-image.jpg);
-}
-
 
 .articlesFlexContainer {
   display:flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  background-color: $secondaryBackgroundColor;
 }
 
 .flexItem {
@@ -301,28 +292,40 @@ BLOG SECTION - INDEX & BLOG
 
 .articlePics {
   position: relative;
-  background-repeat: no-repeat;
 }
 
 .blogPicBackgrounds {
   position: absolute;
-  background-color: $orangeColor;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  // z-index: 10;
+}
+
+
+.articleContainer1 {
+  padding-right: calc(200px / 2);
+}
+
+.articleContainer2 {
+  // text-align: right;
+  padding-left: calc(200px / 2);
 }
 
 .blogPicBackground1 {
-  top: 1rem;
-  left: 1rem;
+  background-image: url(../assets/left-image.jpg);
+  box-shadow: 1rem 1rem $orangeColor;
+  top: -1.3rem;
+  right: 0;
 }
 
 .blogPicBackground2 {
-  top: 1rem;
-  right: 1rem;
+  background-image: url(../assets/right-image.jpg);
+  box-shadow: -1rem 1rem $orangeColor;
+  bottom: -2rem;
+  left: 0;
 }
-
-
 
 /* ========================================
 HOST PARTY SECTION - INDEX
@@ -368,13 +371,13 @@ EVENTS SECTION - INDEX
 
 .eventPic {
   min-width: 15.2rem; /* min width size of 304px*/
-  padding-right: 2rem;
+  padding-right: 4rem;
   position: relative;
-  z-index: 10;
 }
 
 .eventPic img {
   height: 15.2rem; /* max height size of 304px*/
+  box-shadow: -1rem 1rem .1rem $orangeColor;
   background-size:contain;
 
 }
@@ -554,11 +557,7 @@ input[type="email"] {
   background-color: $backgroundColor;
   border: 2px solid $orangeColor;
 }
-.form-bottom textarea[placeholder="comment"] {
-  color: $primaryFontColor;
-  padding-top:1rem;
-  padding-left:1rem;
-}
+
 
 
 
