@@ -591,12 +591,21 @@ MEDIA QUERIES - Desktop first to mobile
     text-align: center;
   }
 
-    //BLOG
-    .flexItem {
-      margin: 0;
-    }
+  //BLOG
+  .flexItem {
+    margin: 0;
+  }
 
+  //BLOG-Page
 
+  .blogContainer {
+    flex-flow: column-reverse nowrap;
+  }
+
+  .newMenuBorder {
+    padding: 0;
+    border: none;
+  }
 
 }
 
