@@ -351,7 +351,7 @@ EVENTS SECTION - INDEX
 ======================================== */
 
 .event {
-  padding: 150px 0;
+  padding: 100px 0;
   background-color: $backgroundColor;
 }
 
@@ -400,12 +400,34 @@ EVENTS SECTION - INDEX
 GALLERY SECTION - INDEX
 ======================================== */
 
+.gallery {
+  background-color: $secondaryBackgroundColor;
+  padding: 100px 0;
+}
 
+.galleryContainer {
+	display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.galleryPics {
+	width: 32%;
+}
+
+.gallery img {
+	height: 100%;
+}
 
 /* ========================================
 FOOTER SECTION - INDEX, CONTACT & BLOG
 ======================================== */
 
+footer {
+  background-color: $footerBackground;
+  text-align: center;
+}
 
 
 /* ||||||||||  BLOG.HTML SPECIFIC ||||||||||| */
@@ -436,11 +458,24 @@ MEDIA QUERIES - Desktop first to mobile
   .nav {
     margin: 0;
   }
+
+  // event
+  .eventContainer {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .eventContent {
+    width: 100%;
+    text-align: center;
+  }
+
     //BLOG
     .flexItem {
       margin: 0;
-      // padding: 0 2rem;
     }
+
 
 
 }
@@ -453,6 +488,19 @@ MEDIA QUERIES - Desktop first to mobile
       width:100%;
       margin: 0;
     }
+
+    //GALLERY
+
+    .gallery {
+      padding: 2.5rem 0;
+    }
+
+    .galleryPics {
+      width: 100%;
+      text-align: center;      
+      padding: 1rem 0,
+    }   
+
 
 
   //navigation transition to hamburger
@@ -486,7 +534,6 @@ MEDIA QUERIES - Desktop first to mobile
   }
 
 
-
   .headerH1Container {
     text-align: center;
   }
@@ -501,7 +548,14 @@ MEDIA QUERIES - Desktop first to mobile
     width: 100%;
   }
 
+  //hostParty section
+  .hostParty p {
+    margin: 1rem 0;
+  }
+
 }
+
+
 
 
 //responsive design for phones
@@ -522,9 +576,6 @@ MEDIA QUERIES - Desktop first to mobile
     padding: 50px 0;
   }
 
-//hostParty section
-  .hostParty p {
-    margin: 1rem 0;
-  }
+
 
 }

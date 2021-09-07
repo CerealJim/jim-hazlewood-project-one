@@ -591,7 +591,7 @@ HOST PARTY SECTION - INDEX
 EVENTS SECTION - INDEX
 ======================================== */
 .event {
-  padding: 150px 0;
+  padding: 100px 0;
   background-color: #111010;
 }
 
@@ -644,9 +644,43 @@ EVENTS SECTION - INDEX
 /* ========================================
 GALLERY SECTION - INDEX
 ======================================== */
+.gallery {
+  background-color: #220303;
+  padding: 100px 0;
+}
+
+.galleryContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.galleryPics {
+  width: 32%;
+}
+
+.gallery img {
+  height: 100%;
+}
+
 /* ========================================
 FOOTER SECTION - INDEX, CONTACT & BLOG
 ======================================== */
+footer {
+  background-color: #111010ca;
+  text-align: center;
+}
+
 /* ||||||||||  BLOG.HTML SPECIFIC ||||||||||| */
 /* ========================================
 BLOG PAGE - ASIDE & PRIMARY BLOG SECTION
@@ -665,6 +699,21 @@ MEDIA QUERIES - Desktop first to mobile
     margin: 0;
   }
 
+  .eventContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .eventContent {
+    width: 100%;
+    text-align: center;
+  }
+
   .flexItem {
     margin: 0;
   }
@@ -673,6 +722,16 @@ MEDIA QUERIES - Desktop first to mobile
   .flexItem {
     width: 100%;
     margin: 0;
+  }
+
+  .gallery {
+    padding: 2.5rem 0;
+  }
+
+  .galleryPics {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
   }
 
   .headerContent {
@@ -721,6 +780,10 @@ MEDIA QUERIES - Desktop first to mobile
   .aboutItems {
     width: 100%;
   }
+
+  .hostParty p {
+    margin: 1rem 0;
+  }
 }
 @media (max-width: 480px) {
   header {
@@ -733,9 +796,5 @@ MEDIA QUERIES - Desktop first to mobile
 
   .about {
     padding: 50px 0;
-  }
-
-  .hostParty p {
-    margin: 1rem 0;
   }
 }
