@@ -301,17 +301,25 @@ button {
 GENERAL STYLES
 ======================================== */
 .wrapper {
-  width: 90%;
+  width: 85%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.outterWrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 button {
-  font-size: 1.25rem;
+  font-size: 2rem;
   letter-spacing: 0.05rem;
   text-transform: capitalize;
   background-color: #BF2603;
   padding: 0.25rem 1.5rem;
+  border: none;
+  margin: 1.5rem 0;
 }
 
 ul {
@@ -499,10 +507,19 @@ ABOUT SECTION - INDEX
 BLOG SECTION - INDEX & BLOG
 ======================================== */
 .blog {
-  background-color: #220303;
+  background-color: #111010;
+  z-index: -10;
 }
 
-.articlesContainer {
+.articlePic1 {
+  background-image: url(../assets/left-image.jpg);
+}
+
+.articlePic2 {
+  background-image: url(../assets/right-image.jpg);
+}
+
+.articlesFlexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -510,28 +527,120 @@ BLOG SECTION - INDEX & BLOG
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #220303;
+}
+
+.flexItem {
+  width: calc(50% - 5rem);
+  padding: 2.5rem 0;
 }
 
 .articlePics {
-  width: calc(50%);
-  background-color: #FF8327;
   position: relative;
+  background-repeat: no-repeat;
 }
 
-.articleContents {
-  width: calc(50%);
+.blogPicBackgrounds {
+  position: absolute;
+  background-color: #FF8327;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
-.articleContents {
-  width: 50%;
+.blogPicBackground1 {
+  top: 1rem;
+  left: 1rem;
+}
+
+.blogPicBackground2 {
+  top: 1rem;
+  right: 1rem;
 }
 
 /* ========================================
 HOST PARTY SECTION - INDEX
 ======================================== */
+.hostParty {
+  background-color: #111010;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.aboutContentWrapper {
+  padding-bottom: 50px;
+}
+
+.hostParty p {
+  margin: 1rem 5rem;
+}
+
+.bannerImage {
+  background-image: url(../assets/banner-image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+}
+
 /* ========================================
 EVENTS SECTION - INDEX
 ======================================== */
+.event {
+  padding: 150px 0;
+  background-color: #111010;
+}
+
+.eventContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: left;
+}
+
+.eventPic {
+  min-width: 15.2rem;
+  /* min width size of 304px*/
+  padding-right: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.eventPic img {
+  height: 15.2rem;
+  /* max height size of 304px*/
+  background-size: contain;
+}
+
+.eventContent {
+  width: calc(100% - 15.2rem - 2rem);
+}
+
+.blogContent h2 {
+  margin: 0;
+}
+
+.eventImgOverlay {
+  position: absolute;
+  background-color: #FF8327;
+  height: 90%;
+  width: calc(100% - 2rem);
+  max-height: 15.2rem;
+  /* max height size of 304px*/
+  background-size: contain;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /* ========================================
 GALLERY SECTION - INDEX
 ======================================== */
@@ -555,8 +664,17 @@ MEDIA QUERIES - Desktop first to mobile
   .nav {
     margin: 0;
   }
+
+  .flexItem {
+    margin: 0;
+  }
 }
 @media (max-width: 768px) {
+  .flexItem {
+    width: 100%;
+    margin: 0;
+  }
+
   .headerContent {
     padding-bottom: 0;
   }
@@ -615,5 +733,9 @@ MEDIA QUERIES - Desktop first to mobile
 
   .about {
     padding: 50px 0;
+  }
+
+  .hostParty p {
+    margin: 1rem 0;
   }
 }

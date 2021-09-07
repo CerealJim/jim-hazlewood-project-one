@@ -77,19 +77,27 @@ GENERAL STYLES
 ======================================== */
 
 .wrapper {
-  width: 90%;
+  width: 85%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.outterWrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
 //button general styles
 button {
-	font-size: 1.25rem;
+	font-size: 2rem; //40px
   letter-spacing: 0.05rem; //1px
 	text-transform: capitalize;
   background-color: $redColor;
   padding: .25rem 1.5rem;
-
+  border:none;
+  margin: 1.5rem 0;
 }
 
 
@@ -261,45 +269,53 @@ BLOG SECTION - INDEX & BLOG
 ======================================== */
 
 .blog {
+  background-color: $backgroundColor;
+  z-index: -10;
+}
+
+.articlePic1 {
+  background-image: url(../assets/left-image.jpg);
+}
+
+.articlePic2 {
+  background-image: url(../assets/right-image.jpg);
+}
+
+
+.articlesFlexContainer {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   background-color: $secondaryBackgroundColor;
 }
 
-.articlesContainer {
-  display:flex;
-  flex-flow: row wrap;
+.flexItem {
+  width: calc(50% - 5rem);
+  padding: 2.5rem 0;
 }
 
 .articlePics {
-  width: calc(50%);
-  background-color: $orangeColor;
   position: relative;
+  background-repeat: no-repeat;
 }
 
-.articleContents {
-  width: calc(50%);
+.blogPicBackgrounds {
+  position: absolute;
+  background-color: $orangeColor;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
-
-
-.articlesLeftSide {
-  // margin-right: 1rem;
+.blogPicBackground1 {
+  top: 1rem;
+  left: 1rem;
 }
 
-.articlesRightSide {
-  // margin-left: 1rem;
+.blogPicBackground2 {
+  top: 1rem;
+  right: 1rem;
 }
-
-.articlePics img {
-  // position: absolute;
-  // top:0;
-  // left:0;
-}
-
-.articleContents {
-  width:50%;
-}
-
-
 
 
 
@@ -307,11 +323,76 @@ BLOG SECTION - INDEX & BLOG
 HOST PARTY SECTION - INDEX
 ======================================== */
 
+.hostParty {
+	background-color: $backgroundColor;
+	text-align: center;
+  padding-top: 150px;
+}
 
+.aboutContentWrapper {
+  padding-bottom:50px;
+}
+
+.hostParty p {
+	margin: 1rem 5rem;
+}
+
+.bannerImage {
+  background-image: url(../assets/banner-image.jpg);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+	width: 100%;
+  height:40vh;
+}
 
 /* ========================================
 EVENTS SECTION - INDEX
 ======================================== */
+
+.event {
+  padding: 150px 0;
+  background-color: $backgroundColor;
+}
+
+.eventContainer {
+  display:flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.eventPic {
+  min-width: 15.2rem; /* min width size of 304px*/
+  padding-right: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.eventPic img {
+  height: 15.2rem; /* max height size of 304px*/
+  background-size:contain;
+
+}
+
+.eventContent {
+  width: calc(100% - 15.2rem - 2rem);
+}
+
+.blogContent h2 {
+  margin: 0;
+}
+
+.eventImgOverlay {
+  position: absolute;
+  background-color: $orangeColor;
+  height: 90%;
+  width: calc(100% - 2rem);
+  max-height: 15.2rem; /* max height size of 304px*/
+  background-size:contain;
+  top:0;
+  left: 0;
+  z-index: -1;
+}
 
 
 
@@ -355,11 +436,23 @@ MEDIA QUERIES - Desktop first to mobile
   .nav {
     margin: 0;
   }
+    //BLOG
+    .flexItem {
+      margin: 0;
+      // padding: 0 2rem;
+    }
+
 
 }
 
 //responsive design for tablets
 @media (max-width: 768px) {
+
+    //BLOG
+    .flexItem {
+      width:100%;
+      margin: 0;
+    }
 
 
   //navigation transition to hamburger
@@ -427,6 +520,11 @@ MEDIA QUERIES - Desktop first to mobile
 //about sections
   .about {
     padding: 50px 0;
+  }
+
+//hostParty section
+  .hostParty p {
+    margin: 1rem 0;
   }
 
 }
