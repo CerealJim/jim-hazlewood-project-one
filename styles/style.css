@@ -1054,6 +1054,11 @@ Contact PAGE STYLES
           align-items: center;
 }
 
+.contactInfo {
+  width: 28%;
+  padding-right: 1rem;
+}
+
 .socialMedia ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1066,12 +1071,91 @@ Contact PAGE STYLES
 }
 
 .socialMedia ul a {
-  padding-right: 1.25rem;
+  padding-right: 1.25;
+  padding-right: 1rem;
   padding-bottom: 0.75rem;
   font-size: 1rem;
 }
 
 .contactPageForm {
+  width: 72%;
+  position: relative;
+  top: -7rem;
   background-color: #220303;
-  padding: 5rem;
+  padding: 3rem 4rem;
+  -webkit-box-shadow: 1rem 1rem 0.1rem #FF8327;
+          box-shadow: 1rem 1rem 0.1rem #FF8327;
+}
+
+.contactFormTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFFFFF;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+form label {
+  font-size: 1.95rem;
+  margin-left: 2rem;
+}
+
+form button {
+  width: 100%;
+}
+
+.contactFormInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48%;
+}
+
+.contactFormInput input[type=text],
+.contactFormInput input[type=email] {
+  color: #FFFFFF;
+  background-color: #220303;
+  border: none;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.contactFormBottom textarea {
+  padding: 1rem;
+  color: #FFFFFF;
+  width: 100%;
+  height: 8rem;
+  line-height: 1.5;
+  resize: none;
+  background-color: #220303;
+  border: 2px solid #FFFFFF;
+}
+
+/* ========================================
+===========================================
+MEDIA QUERIES - Desktop first to mobile
+===========================================
+======================================== */
+@media (max-width: 940px) {
+  .blogContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse nowrap;
+            flex-flow: column-reverse nowrap;
+  }
+
+  .newMenuBorder {
+    padding: 0;
+    border: none;
+  }
+}
+@media (max-width: 480px) {
+  .about {
+    padding: 50px 0;
+  }
 }
