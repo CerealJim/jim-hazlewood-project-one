@@ -305,7 +305,7 @@ button {
 }
 
 /* ========================================
-GENERAL STYLES
+GENERAL STYLES (INCLUDES FOOTER STYLES)
 ======================================== */
 .wrapper {
   width: 85%;
@@ -348,9 +348,16 @@ img {
   height: 100%;
 }
 
-/* ||||||||||  INDEX.HTML ||||||||||| */
 /* ========================================
-HEADER - INDEX, CONTACT & BLOG
+FOOTER SECTION - INDEX, CONTACT & BLOG
+======================================== */
+footer {
+  background-color: #111010ca;
+  text-align: center;
+}
+
+/* ========================================
+HEADER - INDEX, CONTACT & BLOG PAGES
 ======================================== */
 header {
   background-repeat: no-repeat;
@@ -466,6 +473,72 @@ h1 span {
 }
 
 /* ========================================
+===========================================
+MEDIA QUERIES - Desktop first to mobile
+===========================================
+======================================== */
+@media (max-width: 940px) {
+  .nav {
+    margin: 0;
+  }
+}
+@media (max-width: 768px) {
+  .headerContent {
+    padding-bottom: 0;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: contents;
+  }
+
+  .mobileNav .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+
+  .nav a:hover,
+.nav a:focus,
+.nav a:active {
+    border-bottom: none;
+  }
+
+  .nav a {
+    padding: 2rem 0;
+  }
+
+  .headerH1Container {
+    text-align: center;
+  }
+
+  h1 span {
+    line-height: 10rem;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    height: 100vh;
+  }
+
+  .headerImage {
+    display: none;
+  }
+}
+/* ========================================
+INDEX PAGE STYLES
+======================================== */
+/* ========================================
 ABOUT SECTION - INDEX
 ======================================== */
 .about {
@@ -548,11 +621,11 @@ BLOG SECTION - INDEX & BLOG
 }
 
 .articleContainer1 {
-  padding-right: calc(200px / 2);
+  padding-right: 8%;
 }
 
 .articleContainer2 {
-  padding-left: calc(200px / 2);
+  padding-left: 8%;
 }
 
 .blogPicBackground1 {
@@ -685,16 +758,95 @@ GALLERY SECTION - INDEX
 }
 
 /* ========================================
-FOOTER SECTION - INDEX, CONTACT & BLOG
+===========================================
+MEDIA QUERIES - Desktop first to mobile
+===========================================
 ======================================== */
-footer {
-  background-color: #111010ca;
-  text-align: center;
-}
+@media (max-width: 940px) {
+  .about {
+    padding: 5rem 0;
+  }
 
-/* ||||||||||  BLOG.HTML SPECIFIC ||||||||||| */
+  .eventContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .eventContent {
+    width: 100%;
+    text-align: center;
+  }
+
+  .outerWrapper {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .flexItem {
+    width: 100%;
+    padding: 0;
+  }
+
+  .articlePic1 {
+    background-image: url(../assets/left-image.jpg);
+    width: 100%;
+    height: 100%;
+  }
+
+  .articlePic2 {
+    background-image: url(../assets/right-image.jpg);
+    width: 100%;
+    height: 100%;
+  }
+
+  .articleContainers {
+    padding: 0;
+  }
+
+  .blogPicBackgrounds {
+    position: relative;
+  }
+}
+@media (max-width: 768px) {
+  .aboutItems {
+    width: 100%;
+  }
+
+  .about {
+    padding: 4rem 0;
+  }
+
+  .blogPicBackgrounds {
+    position: absolute;
+  }
+
+  .hostParty p {
+    margin: 1rem 0;
+  }
+
+  .gallery {
+    padding: 2.5rem 0;
+  }
+
+  .galleryPics {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .about {
+    padding: 2.5rem 0;
+  }
+}
 /* ========================================
-BLOG PAGE - ASIDE & PRIMARY BLOG SECTION
+BLOG PAGE STYLES
 ======================================== */
 .blogBackground {
   background-color: #111010;
@@ -711,10 +863,17 @@ BLOG PAGE - ASIDE & PRIMARY BLOG SECTION
 }
 
 .asideContainer {
+  width: 30%;
+}
+
+.blogSection {
+  width: 70%;
+}
+
+.asideContainerBackground {
   background-color: #220303;
-  margin-top: 8rem;
+  margin-top: 6rem;
   padding: 19rem 1.5rem 1.5rem;
-  margin-right: 3rem;
   position: relative;
 }
 
@@ -730,11 +889,42 @@ BLOG PAGE - ASIDE & PRIMARY BLOG SECTION
   margin-left: -6rem;
 }
 
+.blogSection {
+  position: relative;
+  top: -8rem;
+  right: -5rem;
+}
+
+.newMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.newMenuImg {
+  -webkit-box-shadow: -1rem 1rem #FF8327;
+          box-shadow: -1rem 1rem #FF8327;
+  position: relative;
+  left: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
 .newMenuBorder {
-  padding-left: 5rem;
-  padding-bottom: 5rem;
-  border-left: 1px solid #FF8327;
-  border-bottom: 1px solid #FF8327;
+  padding: 5rem;
+  border-left: 0.15rem solid #FF8327;
+  border-bottom: 0.15rem solid #FF8327;
+}
+
+.newMenuBorder p {
+  padding: 0.5rem 0;
 }
 
 .blogRecentPosts p::before {
@@ -750,6 +940,7 @@ BLOG PAGE - BLOG COMMENTS AND FORM
 .blogComments {
   padding-left: 4rem;
   padding-top: 4rem;
+  padding-right: 4rem;
 }
 
 .blogComment {
@@ -769,10 +960,6 @@ BLOG PAGE - BLOG COMMENTS AND FORM
   color: #FF8327;
   display: block;
   padding-bottom: 1rem;
-}
-
-.contactBlogForm {
-  padding-bottom: 5rem;
 }
 
 .form-top {
@@ -824,36 +1011,12 @@ input[type=email] {
   border: 2px solid #FF8327;
 }
 
-/* ||  CONTACT.HTML   */
 /* ========================================
 ===========================================
 MEDIA QUERIES - Desktop first to mobile
 ===========================================
 ======================================== */
 @media (max-width: 940px) {
-  .nav {
-    margin: 0;
-  }
-
-  .eventContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  .eventContent {
-    width: 100%;
-    text-align: center;
-  }
-
-  .flexItem {
-    margin: 0;
-  }
-
   .blogContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -866,83 +1029,11 @@ MEDIA QUERIES - Desktop first to mobile
     border: none;
   }
 }
-@media (max-width: 768px) {
-  .flexItem {
-    width: 100%;
-    margin: 0;
-  }
-
-  .gallery {
-    padding: 2.5rem 0;
-  }
-
-  .galleryPics {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .headerContent {
-    padding-bottom: 0;
-  }
-
-  .desktopNav {
-    display: none;
-  }
-
-  .mobileNav {
-    display: contents;
-  }
-
-  .mobileNav .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-  }
-
-  .nav a:hover,
-.nav a:focus,
-.nav a:active {
-    border-bottom: none;
-  }
-
-  .nav a {
-    padding: 2rem 0;
-  }
-
-  .headerH1Container {
-    text-align: center;
-  }
-
-  h1 span {
-    line-height: 10rem;
-  }
-
-  .aboutItems {
-    width: 100%;
-  }
-
-  .hostParty p {
-    margin: 1rem 0;
-  }
-}
 @media (max-width: 480px) {
-  header {
-    height: 100vh;
-  }
-
-  .headerImage {
-    display: none;
-  }
-
   .about {
     padding: 50px 0;
   }
 }
+/* ========================================
+Contact PAGE STYLES
+======================================== */

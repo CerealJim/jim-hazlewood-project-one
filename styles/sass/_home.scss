@@ -1,0 +1,294 @@
+
+
+/* ========================================
+ABOUT SECTION - INDEX
+======================================== */
+
+.about {
+  background-color: $backgroundColor;
+  z-index:-10;
+  padding: 150px 0;
+}
+
+.aboutHome {
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.aboutItems {
+  display:flex;
+  margin: 1rem 0;
+  width: 50%;
+}
+
+.aboutItems span:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $redColor;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  margin-top:.25rem;
+  margin-right: .5rem;
+}
+
+
+
+/* ========================================
+BLOG SECTION - INDEX & BLOG
+======================================== */
+
+.blog {
+  background-color: $secondaryBackgroundColor;
+}
+
+.articlesFlexContainer {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.flexItem {
+  width: calc(50% - 5rem);
+  padding: 2.5rem 0;
+}
+
+.articlePics {
+  position: relative;
+}
+
+.blogPicBackgrounds {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.articleContainer1 {
+  padding-right: 8%;
+}
+
+.articleContainer2 {
+
+  padding-left: 8%;
+}
+
+.blogPicBackground1 {
+  background-image: url(../assets/left-image.jpg);
+  box-shadow: 1rem 1rem $orangeColor;
+  top: -1.3rem;
+  right: 0;
+}
+
+.blogPicBackground2 {
+  background-image: url(../assets/right-image.jpg);
+  box-shadow: -1rem 1rem $orangeColor;
+  bottom: -2rem;
+  left: 0;
+}
+
+/* ========================================
+HOST PARTY SECTION - INDEX
+======================================== */
+
+.hostParty {
+	background-color: $backgroundColor;
+	text-align: center;
+  padding-top: 150px;
+}
+
+.aboutContentWrapper {
+  padding-bottom:50px;
+}
+
+.hostParty p {
+	margin: 1rem 5rem;
+}
+
+.bannerImage {
+  background-image: url(../assets/banner-image.jpg);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+	width: 100%;
+  height:40vh;
+}
+
+/* ========================================
+EVENTS SECTION - INDEX
+======================================== */
+
+.event {
+  padding: 100px 0;
+  background-color: $backgroundColor;
+}
+
+.eventContainer {
+  display:flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.eventPic {
+  min-width: 15.2rem; /* min width size of 304px*/
+  padding-right: 4rem;
+  position: relative;
+}
+
+.eventPic img {
+  height: 15.2rem; /* max height size of 304px*/
+  box-shadow: -1rem 1rem .1rem $orangeColor;
+  background-size:contain;
+
+}
+
+.eventContent {
+  width: calc(100% - 15.2rem - 2rem);
+}
+
+.blogContent h2 {
+  margin: 0;
+}
+
+.eventImgOverlay {
+  position: absolute;
+  background-color: $orangeColor;
+  height: 90%;
+  width: calc(100% - 2rem);
+  max-height: 15.2rem; /* max height size of 304px*/
+  background-size:contain;
+  top:0;
+  left: 0;
+  z-index: -1;
+}
+
+
+
+/* ========================================
+GALLERY SECTION - INDEX
+======================================== */
+
+.gallery {
+  background-color: $secondaryBackgroundColor;
+  padding: 100px 0;
+}
+
+.galleryContainer {
+	display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.galleryPics {
+	width: 32%;
+}
+
+.gallery img {
+	height: 100%;
+}
+
+
+/* ========================================
+===========================================
+MEDIA QUERIES - Desktop first to mobile
+===========================================
+======================================== */
+
+//responsive design for small desktop screens
+@media (max-width: 940px) {
+
+// === ABOUT ===  //
+  .about {
+    padding: 5rem 0;
+  }
+
+  // ===  EVENT  === //
+  .eventContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eventContent {
+    width: 100%;
+    text-align: center;
+  }
+
+  // ===  BLOG  === //
+  .outerWrapper {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .flexItem {
+    width: 100%;
+    padding: 0;
+  }
+
+  .articlePic1 {
+    background-image: url(../assets/left-image.jpg);
+    width:100%;
+    height:100%;
+  }
+
+  .articlePic2 {
+    background-image: url(../assets/right-image.jpg);
+    width:100%;
+    height:100%;
+  }
+
+  .articleContainers {
+    padding: 0;
+  }
+
+  .blogPicBackgrounds {
+    position: relative;
+  }
+
+
+}
+
+//responsive design for tablets
+@media (max-width: 768px) {
+
+  //about sections
+  .aboutItems {
+    width: 100%;
+  }
+
+  .about {
+    padding: 4rem 0;
+  }
+  
+
+  .blogPicBackgrounds {
+    position: absolute;
+  }
+  //hostParty section
+  .hostParty p {
+    margin: 1rem 0;
+  }
+
+  //GALLERY
+
+  .gallery {
+    padding: 2.5rem 0;
+  }
+
+  .galleryPics {
+    width: 100%;
+    text-align: center;      
+    padding: 1rem 0,
+  }   
+}
+
+//responsive design for phones
+@media (max-width: 480px) {
+  //about sections
+  .about {
+    padding: 2.5rem 0;
+  }
+}

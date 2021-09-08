@@ -1,0 +1,168 @@
+
+
+
+header {
+  background-repeat: no-repeat;
+  // background-position:top left;
+	background-size:cover;
+	width: 100%;
+  height:70vh;
+  position:relative
+}
+
+.headerHome {
+  background-image: url(../assets/home-image-1.jpg);
+}
+
+.headerBlog {
+  background-image: url(../assets/blog-header-1.jpg);
+  background-position: center;
+}
+
+.headerContact {
+  background-image: url(../assets/contact-header-1.jpg);
+  background-position: center;
+}
+
+.headerContent {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0; //40px  top and bottom
+  height:100%;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.nav {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15%;
+
+}
+
+.navHome li:first-of-type a {
+  color: $orangeColor;
+}
+
+.navBlog li:nth-last-child(2) a {
+  color: $orangeColor;
+}
+
+.navContact li:last-child a {
+  color: $orangeColor;
+}
+
+.nav a {
+  padding: 0 .5rem; //10px left and right
+  text-transform: uppercase;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
+  border-bottom: 2px solid $orangeColor;
+}
+
+.headerH1Container {
+  display:flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+h1 {
+  z-index: 10;
+}
+
+h1 span{
+  margin: -.35rem;  //7px
+  line-height: 7rem;  //140px
+}
+
+.subPageH1 {
+  padding-bottom: 20vh;
+}
+
+
+.headerImage {
+  background-image: url(../assets/header-box.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: absolute;
+  bottom: -10vh;
+  right: 0;
+  height:50vh;
+	width: 50%;
+  z-index: 5;
+}
+
+
+/* ========================================
+===========================================
+MEDIA QUERIES - Desktop first to mobile
+===========================================
+======================================== */
+
+//responsive design for small desktop screens
+@media (max-width: 940px) {
+
+  //navigation
+  .nav {
+    margin: 0;
+  }
+}
+
+//responsive design for tablets
+@media (max-width: 768px) {
+  //navigation transition to hamburger
+  .headerContent {
+    padding-bottom: 0;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+  .mobileNav {
+    display: contents;
+  }
+
+  .mobileNav .nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  .nav a:hover,
+  .nav a:focus,
+  .nav a:active {
+    border-bottom: none;
+  }
+
+  .nav a {
+    padding: 2rem 0; //20px top and bottom
+  }
+
+  .headerH1Container {
+    text-align: center;
+  }
+
+  h1 span {
+    line-height: 10rem;
+  }
+}
+
+
+//responsive design for phones
+@media (max-width: 480px) {
+  header {
+    height:100vh;
+  }
+  .headerImage {
+    display:none;
+  }
+}

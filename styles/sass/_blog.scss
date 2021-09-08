@@ -1,0 +1,179 @@
+
+
+.blogBackground {
+  background-color: $backgroundColor;
+  // position: relative;
+}
+
+.blogContainer {
+  display:flex;
+  flex-flow: row nowrap;
+}
+
+.asideContainer {
+  width:30%;
+
+}
+.blogSection {
+  width: 70%;
+}
+
+
+.asideContainerBackground {
+  background-color: $secondaryBackgroundColor;
+  margin-top: 6rem;
+  padding: 19rem 1.5rem 1.5rem;
+  position: relative;
+}
+
+
+.blogAsideImg {
+  background-image: url(../assets/sidebar-image.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  position:absolute;
+  top: -1rem;
+  right: 1rem;
+  height: 19rem;
+  width: 19rem;
+  margin-left: -6rem;
+}
+
+.blogSection {
+  position: relative;
+  top: -8rem;
+  right: -5rem;
+}
+
+.newMenu {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.newMenuImg {
+  box-shadow: -1rem 1rem #FF8327;
+  position:relative;
+  left: 1rem;
+  height:100%;
+  width: 100%;
+}
+
+
+.newMenuBorder {
+  padding: 5rem;
+  border-left: 0.15rem solid $orangeColor;
+  border-bottom: 0.15rem solid $orangeColor;
+}
+
+.newMenuBorder p {
+  padding: .5rem 0;
+}
+.blogRecentPosts p::before {
+  content: "●"; 
+  font-size: 1rem;
+  color: red;
+  margin: 0 .25rem;
+}
+
+/* ========================================
+BLOG PAGE - BLOG COMMENTS AND FORM
+======================================== */
+
+.blogComments {
+  padding-left: 4rem;
+  padding-top: 4rem;
+  padding-right: 4rem;
+}
+
+.blogComment {
+  display:flex;
+  padding: 2rem 0;
+}
+
+.commentPic {
+  width: 45%;
+  height: 4.5rem;
+  margin-right: 1rem;
+}
+
+.textColor {
+  color: $orangeColor;
+  display:block;
+  padding-bottom: 1rem;
+}
+
+.form-top {
+  display:flex;
+  color: $primaryFontColor;
+  justify-content: space-between;
+}
+
+form label {
+  font-size: 1.95rem;  //39px
+  margin-left: 2rem;
+}
+
+form button {
+  width: 100%;
+}
+
+.formInput {
+  display:flex;
+  flex-direction: column;
+  width:48%
+}
+
+input[type="text"],
+input[type="email"] {
+  color: $primaryFontColor;
+  background-color: $backgroundColor;
+  border: none;
+  border-bottom: 2px solid $orangeColor;
+}
+
+.form-bottom textarea {
+  padding:1rem;
+  color: $primaryFontColor;
+  width: 100%;
+  height: 8rem;
+  line-height: 1.5;
+  resize:none;
+  background-color: $backgroundColor;
+  border: 2px solid $orangeColor;
+}
+
+/* ========================================
+===========================================
+MEDIA QUERIES - Desktop first to mobile
+===========================================
+======================================== */
+
+//responsive design for small desktop screens
+@media (max-width: 940px) {
+  //BLOG-Page
+  .blogContainer {
+    flex-flow: column-reverse nowrap;
+  }
+
+  .newMenuBorder {
+    padding: 0;
+    border: none;
+  }
+
+}
+
+//responsive design for tablets
+@media (max-width: 768px) {
+
+}
+
+
+
+//responsive design for phones
+@media (max-width: 480px) {
+//about sections
+  .about {
+    padding: 50px 0;
+  }
+}

@@ -1,0 +1,68 @@
+
+
+
+html {
+	font-family: $mainFontFamily;
+	font-size: 125%; /* setting font-size default to 20px*/
+	line-height: 1.5;
+}
+
+
+h1, h2, h3, h4, li, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  font-size: 4.16rem;  //83.2px
+  font-weight: bold;
+  letter-spacing: 0.13rem;  //2.6px
+  line-height: 4.735rem;  //94.7px
+}
+
+.logo {
+  font-family: $bigHeadingFontFamily;
+  font-weight: normal;
+  color: $orangeColor;
+  font-size: 13.07rem;  //261.4px
+  letter-spacing: 0.12rem;  //2.4px
+  display:block;
+}
+
+h2 {
+  font-size: 3.4rem;  //68px
+  letter-spacing: 0.11rem;  //2.2px
+  line-height: 2.9rem;  //85px
+}
+h3 {
+  font-size: 2.25rem;  //40px
+  letter-spacing: 0.11rem;  //2.2px
+  line-height: 0.5;
+}
+
+p {
+  font-size: 1.95rem;  //39px
+  line-height: 1.5rem;  //30px
+  letter-spacing: 0.095rem; //1.9px
+}
+
+a {
+  font-size: 1.9rem; //38px
+  font-weight: bold;
+  line-height: 1.45rem;  //29px
+  letter-spacing: 0.095rem; //1.9px
+}
+
+ul li .navLogo {
+  font-family: $bigHeadingFontFamily;
+  font-size: 3.4rem;  //68px
+  font-weight: normal;
+}
+
+button {
+	font-family: $bigHeadingFontFamily;
+  color: $primaryFontColor;
+  font-weight: normal;
+}
+
