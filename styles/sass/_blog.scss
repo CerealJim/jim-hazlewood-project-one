@@ -103,7 +103,7 @@ BLOG PAGE - BLOG COMMENTS AND FORM
   padding-bottom: 1rem;
 }
 
-.form-top {
+.formTop {
   display:flex;
   color: $primaryFontColor;
   justify-content: space-between;
@@ -132,7 +132,7 @@ input[type="email"] {
   border-bottom: 2px solid $orangeColor;
 }
 
-.form-bottom textarea {
+.formBottom textarea {
   padding:1rem;
   color: $primaryFontColor;
   width: 100%;

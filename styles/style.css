@@ -962,7 +962,7 @@ BLOG PAGE - BLOG COMMENTS AND FORM
   padding-bottom: 1rem;
 }
 
-.form-top {
+.formTop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1000,7 +1000,7 @@ input[type=email] {
   border-bottom: 2px solid #FF8327;
 }
 
-.form-bottom textarea {
+.formBottom textarea {
   padding: 1rem;
   color: #FFFFFF;
   width: 100%;
@@ -1037,3 +1037,41 @@ MEDIA QUERIES - Desktop first to mobile
 /* ========================================
 Contact PAGE STYLES
 ======================================== */
+.contactPageMain {
+  background-color: #111010;
+}
+
+.contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socialMedia ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  font-size: 1rem;
+}
+
+.socialMedia ul a {
+  padding-right: 1.25rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.contactPageForm {
+  background-color: #220303;
+  padding: 5rem;
+}

@@ -1,0 +1,29 @@
+
+
+.contactPageMain {
+  background-color: $backgroundColor;
+}
+
+.contactContainer {
+  display:flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.socialMedia ul {
+  display:flex;
+  flex-flow: row wrap;
+  font-size: 1rem;
+}
+.socialMedia ul a {
+  padding-right:1.25rem;
+  padding-bottom:.75rem;
+  font-size: 1rem;
+}
+
+// FORM
+
+.contactPageForm {
+  background-color: $secondaryBackgroundColor;
+  padding: 5rem;
+}
