@@ -42,7 +42,7 @@
 .blogSection {
   position: relative;
   top: -8rem;
-  right: -5rem;
+  right: -2.5rem;
 }
 
 .newMenu {
@@ -61,7 +61,7 @@
 
 
 .newMenuBorder {
-  padding: 5rem;
+  padding: 5rem 5rem 3rem;
   border-left: 0.15rem solid $orangeColor;
   border-bottom: 0.15rem solid $orangeColor;
 }
@@ -92,9 +92,13 @@ BLOG PAGE - BLOG COMMENTS AND FORM
 }
 
 .commentPic {
-  width: 45%;
-  height: 4.5rem;
-  margin-right: 1rem;
+  width: 100%;
+  min-width: 5rem;
+  height: 5rem;
+}
+
+.commentContent {
+  margin-left: 1rem;
 }
 
 .textColor {
@@ -143,6 +147,14 @@ input[type="email"] {
   border: 2px solid $orangeColor;
 }
 
+.blogAsideImg {
+  background-image: url(../assets/sidebar-image.jpg);
+
+
+  position:relative;
+  margin-left: 0;
+}
+
 /* ========================================
 ===========================================
 MEDIA QUERIES - Desktop first to mobile
@@ -156,10 +168,44 @@ MEDIA QUERIES - Desktop first to mobile
     flex-flow: column-reverse nowrap;
   }
 
+  
+.asideContainer {
+  width:100%;
+
+}
+.blogSection {
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.newMenuImg {
+  margin: 2rem 0;
+}
+
+  .asideContainerBackground {
+    display:flex;
+    background-color: $secondaryBackgroundColor;
+    margin-top: 0;
+    padding: 1rem;
+    position: relative;
+  }
+
   .newMenuBorder {
     padding: 0;
     border: none;
+    width: 100%;
   }
+
+  
+.newMenuImg {
+  box-shadow: -1rem 1rem #FF8327;
+  left: 0;
+}
+
+.blogComments {
+  padding: 3rem 0 1rem;
+}
 
 }
 
@@ -172,8 +218,11 @@ MEDIA QUERIES - Desktop first to mobile
 
 //responsive design for phones
 @media (max-width: 480px) {
-//about sections
-  .about {
-    padding: 50px 0;
+  .asideContainer{
+    padding-bottom:2.5rem;
   }
+  .newMenuImg {
+
+  }
+
 }

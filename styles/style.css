@@ -356,6 +356,10 @@ footer {
   text-align: center;
 }
 
+footer p {
+  line-height: normal;
+}
+
 /* ========================================
 HEADER - INDEX, CONTACT & BLOG PAGES
 ======================================== */
@@ -365,6 +369,11 @@ header {
   width: 100%;
   height: 70vh;
   position: relative;
+}
+
+.headerBlog,
+.headerContact {
+  height: 50vh;
 }
 
 .headerHome {
@@ -455,8 +464,12 @@ h1 span {
   line-height: 7rem;
 }
 
+.headerHome {
+  padding-bottom: 3vh;
+}
+
 .subPageH1 {
-  padding-bottom: 20vh;
+  padding-bottom: 10vh;
 }
 
 .headerImage {
@@ -892,7 +905,7 @@ BLOG PAGE STYLES
 .blogSection {
   position: relative;
   top: -8rem;
-  right: -5rem;
+  right: -2.5rem;
 }
 
 .newMenu {
@@ -918,7 +931,7 @@ BLOG PAGE STYLES
 }
 
 .newMenuBorder {
-  padding: 5rem;
+  padding: 5rem 5rem 3rem;
   border-left: 0.15rem solid #FF8327;
   border-bottom: 0.15rem solid #FF8327;
 }
@@ -951,9 +964,13 @@ BLOG PAGE - BLOG COMMENTS AND FORM
 }
 
 .commentPic {
-  width: 45%;
-  height: 4.5rem;
-  margin-right: 1rem;
+  width: 100%;
+  min-width: 5rem;
+  height: 5rem;
+}
+
+.commentContent {
+  margin-left: 1rem;
 }
 
 .textColor {
@@ -1011,6 +1028,12 @@ input[type=email] {
   border: 2px solid #FF8327;
 }
 
+.blogAsideImg {
+  background-image: url(../assets/sidebar-image.jpg);
+  position: relative;
+  margin-left: 0;
+}
+
 /* ========================================
 ===========================================
 MEDIA QUERIES - Desktop first to mobile
@@ -1024,14 +1047,49 @@ MEDIA QUERIES - Desktop first to mobile
             flex-flow: column-reverse nowrap;
   }
 
+  .asideContainer {
+    width: 100%;
+  }
+
+  .blogSection {
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+
+  .newMenuImg {
+    margin: 2rem 0;
+  }
+
+  .asideContainerBackground {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #220303;
+    margin-top: 0;
+    padding: 1rem;
+    position: relative;
+  }
+
   .newMenuBorder {
     padding: 0;
     border: none;
+    width: 100%;
+  }
+
+  .newMenuImg {
+    -webkit-box-shadow: -1rem 1rem #FF8327;
+            box-shadow: -1rem 1rem #FF8327;
+    left: 0;
+  }
+
+  .blogComments {
+    padding: 3rem 0 1rem;
   }
 }
 @media (max-width: 480px) {
-  .about {
-    padding: 50px 0;
+  .asideContainer {
+    padding-bottom: 2.5rem;
   }
 }
 /* ========================================
@@ -1142,20 +1200,84 @@ MEDIA QUERIES - Desktop first to mobile
 ===========================================
 ======================================== */
 @media (max-width: 940px) {
-  .blogContainer {
+  .contactContainer {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-flow: column-reverse nowrap;
-            flex-flow: column-reverse nowrap;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
-  .newMenuBorder {
-    padding: 0;
-    border: none;
+  .contactInfo {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .contactPageForm {
+    width: 100%;
+    position: relative;
+    top: 0rem;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 2rem;
+    -webkit-box-shadow: 1rem 1rem 0.1rem #FF8327;
+            box-shadow: 1rem 1rem 0.1rem #FF8327;
   }
 }
 @media (max-width: 480px) {
-  .about {
-    padding: 50px 0;
+  .contactFormTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #FFFFFF;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  form label {
+    margin-left: 0;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .contactFormInput {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+
+  .email {
+    padding-bottom: 2rem;
+  }
+
+  .contactFormInput input[type=text],
+.contactFormInput input[type=email] {
+    border: 2px solid #FFFFFF;
+  }
+
+  .contactPageForm {
+    -webkit-box-shadow: 0.5rem 0.5rem 0.1rem #FF8327;
+            box-shadow: 0.5rem 0.5rem 0.1rem #FF8327;
   }
 }

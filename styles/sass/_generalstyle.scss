@@ -53,5 +53,10 @@ FOOTER SECTION - INDEX, CONTACT & BLOG
 
 footer {
   background-color: $footerBackground;
-  text-align: center;
+  text-align: center; 
+}
+
+footer p {
+  line-height: normal;
+  
 }

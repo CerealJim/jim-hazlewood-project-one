@@ -10,6 +10,11 @@ header {
   position:relative
 }
 
+.headerBlog,
+.headerContact {
+  height:50vh;
+}
+
 .headerHome {
   background-image: url(../assets/home-image-1.jpg);
 }
@@ -82,8 +87,12 @@ h1 span{
   line-height: 7rem;  //140px
 }
 
+.headerHome {
+  padding-bottom:3vh;
+}
+
 .subPageH1 {
-  padding-bottom: 20vh;
+  padding-bottom: 10vh;
 }
 
 

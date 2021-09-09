@@ -8,15 +8,12 @@
   display:flex;
   flex-flow: row nowrap;
   align-items: center;
-
 }
 
 .contactInfo {
   width:28%;
   padding-right: 1rem;
 }
-
-
 
 .socialMedia ul {
   display:flex;
@@ -30,8 +27,9 @@
   font-size: 1rem;
 }
 
-// FORM
-
+// ==========
+// Form
+// ==========
 .contactPageForm {
   width: 72%;
   position: relative;
@@ -90,14 +88,28 @@ MEDIA QUERIES - Desktop first to mobile
 
 //responsive design for small desktop screens
 @media (max-width: 940px) {
-  //BLOG-Page
-  .blogContainer {
-    flex-flow: column-reverse nowrap;
+
+  .contactContainer {
+    flex-direction: column;
   }
 
-  .newMenuBorder {
-    padding: 0;
-    border: none;
+  .contactInfo {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .contactPageForm {
+    width: 100%;
+    position: relative;
+    top: 0rem;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 2rem;
+    box-shadow: 1rem 1rem .1rem $orangeColor;
   }
 
 }
@@ -111,8 +123,38 @@ MEDIA QUERIES - Desktop first to mobile
 
 //responsive design for phones
 @media (max-width: 480px) {
-//about sections
-  .about {
-    padding: 50px 0;
+
+  .contactFormTop {
+    display:flex;
+    color: $primaryFontColor;
+    flex-direction: column;
   }
+  
+  form label {
+    margin-left: 0;
+  }
+  
+  form button {
+    width: 100%;
+  }
+  
+  .contactFormInput {
+    display:flex;
+    flex-direction: column;
+    width:100%;
+  }
+
+  .email {
+    padding-bottom: 2rem;
+  }
+  
+  .contactFormInput input[type="text"],
+  .contactFormInput input[type="email"] {
+    border: 2px solid $primaryFontColor;
+  }
+  
+  .contactPageForm {
+    box-shadow: .5rem .5rem .1rem $orangeColor;
+  }
+
 }
