@@ -147,14 +147,6 @@ input[type="email"] {
   border: 2px solid $orangeColor;
 }
 
-.blogAsideImg {
-  background-image: url(../assets/sidebar-image.jpg);
-
-
-  position:relative;
-  margin-left: 0;
-}
-
 /* ========================================
 ===========================================
 MEDIA QUERIES - Desktop first to mobile
@@ -165,30 +157,21 @@ MEDIA QUERIES - Desktop first to mobile
 @media (max-width: 940px) {
   //BLOG-Page
   .blogContainer {
-    flex-flow: column-reverse nowrap;
+    flex-flow: column nowrap;
+  }
+ 
+  .asideContainer {
+    width:100%;
   }
 
-  
-.asideContainer {
-  width:100%;
+  .blogSection {
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
 
-}
-.blogSection {
-  width: 100%;
-  top: 0;
-  right: 0;
-}
-
-.newMenuImg {
-  margin: 2rem 0;
-}
-
-  .asideContainerBackground {
-    display:flex;
-    background-color: $secondaryBackgroundColor;
-    margin-top: 0;
-    padding: 1rem;
-    position: relative;
+  .newMenuImg {
+    margin: 2rem 0;
   }
 
   .newMenuBorder {
@@ -196,33 +179,85 @@ MEDIA QUERIES - Desktop first to mobile
     border: none;
     width: 100%;
   }
-
   
-.newMenuImg {
-  box-shadow: -1rem 1rem #FF8327;
-  left: 0;
-}
+  .newMenuImg {
+    box-shadow: -1rem 1rem #FF8327;
+    left: 0;
+  }
 
-.blogComments {
-  padding: 3rem 0 1rem;
-}
+  .blogComments {
+    padding: 3rem 0 1rem;
+  }
+  
+  .asideContainerBackground {
+    display:flex;
+    flex-flow: row wrap;
+    background-color: $secondaryBackgroundColor;
+    margin: 1rem auto;
+    padding: 1rem;
+    position: relative;
+  }
 
+  .blogRecentPosts ul {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+  }
+  .blogRecentPosts ul li {
+    width: 50%;
+  }
+  
+  .blogAsideImg {
+    display: none;
+  }
 }
 
 //responsive design for tablets
 @media (max-width: 768px) {
-
+  .blogRecentPosts ul li {
+    width: 100%;
+  }
 }
-
 
 
 //responsive design for phones
 @media (max-width: 480px) {
   .asideContainer{
-    padding-bottom:2.5rem;
+    padding-bottom:1.5rem;
   }
-  .newMenuImg {
 
+  .newMenuImg {
+    box-shadow: -.5rem .5rem #FF8327;
+
+  }
+
+  .blogComment {
+    flex-direction: column;
+  }
+
+  .commentContent {
+    margin-left: 0rem;
+  }
+
+  .commentPic {
+    padding-bottom: 1rem;
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .formTop {
+    // display:flex;
+    flex-direction: column;
+    // width: 100%;
+  }
+
+  .formInput {
+    width: 100%;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    border: 2px solid $orangeColor;
   }
 
 }
