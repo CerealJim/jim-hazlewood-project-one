@@ -159,7 +159,7 @@ MEDIA QUERIES - Desktop first to mobile
   .blogContainer {
     flex-flow: column nowrap;
   }
- 
+
   .asideContainer {
     width:100%;
   }
@@ -214,9 +214,7 @@ MEDIA QUERIES - Desktop first to mobile
 
 //responsive design for tablets
 @media (max-width: 768px) {
-  .blogRecentPosts ul li {
-    width: 100%;
-  }
+
 }
 
 
@@ -224,6 +222,10 @@ MEDIA QUERIES - Desktop first to mobile
 @media (max-width: 480px) {
   .asideContainer{
     padding-bottom:1.5rem;
+  }
+
+  .blogRecentPosts ul li {
+    width: 100%;
   }
 
   .newMenuImg {

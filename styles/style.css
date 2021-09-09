@@ -780,21 +780,6 @@ MEDIA QUERIES - Desktop first to mobile
     padding: 5rem 0;
   }
 
-  .eventContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  .eventContent {
-    width: 100%;
-    text-align: center;
-  }
-
   .outerWrapper {
     width: 85%;
     max-width: 1200px;
@@ -819,11 +804,39 @@ MEDIA QUERIES - Desktop first to mobile
   }
 
   .articleContainers {
-    padding: 0;
+    padding: 1rem 0;
+    text-align: center;
   }
 
   .blogPicBackgrounds {
     position: relative;
+  }
+
+  .hostParty {
+    padding: 1rem;
+  }
+
+  .event {
+    padding: 1rem 0;
+  }
+
+  .eventContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .eventContent {
+    width: 100%;
+    text-align: center;
+  }
+
+  .eventPic {
+    padding: 0;
   }
 }
 @media (max-width: 768px) {
@@ -856,6 +869,21 @@ MEDIA QUERIES - Desktop first to mobile
 @media (max-width: 480px) {
   .about {
     padding: 2.5rem 0;
+  }
+
+  .eventPic img {
+    -webkit-box-shadow: -0.5rem 0.5rem 0.1rem #FF8327;
+            box-shadow: -0.5rem 0.5rem 0.1rem #FF8327;
+    height: 100%;
+  }
+
+  .eventPic {
+    min-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .bannerImage {
+    background-position: center right;
   }
 }
 /* ========================================
@@ -1106,14 +1134,13 @@ MEDIA QUERIES - Desktop first to mobile
     display: none;
   }
 }
-@media (max-width: 768px) {
-  .blogRecentPosts ul li {
-    width: 100%;
-  }
-}
 @media (max-width: 480px) {
   .asideContainer {
     padding-bottom: 1.5rem;
+  }
+
+  .blogRecentPosts ul li {
+    width: 100%;
   }
 
   .newMenuImg {

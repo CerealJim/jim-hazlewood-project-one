@@ -191,6 +191,8 @@ GALLERY SECTION - INDEX
 }
 
 
+
+
 /* ========================================
 ===========================================
 MEDIA QUERIES - Desktop first to mobile
@@ -203,17 +205,6 @@ MEDIA QUERIES - Desktop first to mobile
 // === ABOUT ===  //
   .about {
     padding: 5rem 0;
-  }
-
-  // ===  EVENT  === //
-  .eventContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .eventContent {
-    width: 100%;
-    text-align: center;
   }
 
   // ===  BLOG  === //
@@ -241,13 +232,38 @@ MEDIA QUERIES - Desktop first to mobile
   }
 
   .articleContainers {
-    padding: 0;
+    padding: 1rem 0;
+    text-align: center;
   }
 
   .blogPicBackgrounds {
     position: relative;
   }
 
+  // ===  Host a Party  === //
+  .hostParty {
+    padding: 1rem;
+  }
+
+  
+  // ===  EVENT  === //
+  .event {
+    padding: 1rem 0
+  }
+
+  .eventContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eventContent {
+    width: 100%;
+    text-align: center;
+  }
+
+  .eventPic {
+    padding: 0;
+  }
 
 }
 
@@ -291,4 +307,21 @@ MEDIA QUERIES - Desktop first to mobile
   .about {
     padding: 2.5rem 0;
   }
+
+  .eventPic img {
+    box-shadow: -0.5rem 0.5rem .1rem $orangeColor;
+    height:100%
+  }
+
+  .eventPic {
+    min-width: 100%;
+    padding: 1rem 0;
+  }
+  
+
+  .bannerImage {
+    background-position: center right;
+  }
+  
+  
 }
