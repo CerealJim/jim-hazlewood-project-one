@@ -6,7 +6,6 @@ ABOUT SECTION - INDEX
 
 .about {
   background-color: $backgroundColor;
-  z-index:-10;
   padding: 150px 0;
 }
 
@@ -32,8 +31,6 @@ ABOUT SECTION - INDEX
   margin-top:.25rem;
   margin-right: .5rem;
 }
-
-
 
 /* ========================================
 BLOG SECTION - INDEX & BLOG
@@ -71,10 +68,10 @@ BLOG SECTION - INDEX & BLOG
 }
 
 .articleContainer2 {
-
   padding-left: 8%;
 }
 
+//These images do not have any real meaning to 'plan ahead' and 'new locations' and would not make a difference to the content if they are not seen. They are only for styling.
 .blogPicBackground1 {
   background-image: url(../assets/left-image.jpg);
   box-shadow: 1rem 1rem $orangeColor;
@@ -107,6 +104,7 @@ HOST PARTY SECTION - INDEX
 	margin: 1rem 5rem;
 }
 
+//banner image - no meaning to the content and is just for styling.
 .bannerImage {
   background-image: url(../assets/banner-image.jpg);
   background-position: center;
@@ -141,7 +139,6 @@ EVENTS SECTION - INDEX
   height: 15.2rem; /* max height size of 304px*/
   box-shadow: -1rem 1rem .1rem $orangeColor;
   background-size:contain;
-
 }
 
 .eventContent {
@@ -151,20 +148,6 @@ EVENTS SECTION - INDEX
 .blogContent h2 {
   margin: 0;
 }
-
-.eventImgOverlay {
-  position: absolute;
-  background-color: $orangeColor;
-  height: 90%;
-  width: calc(100% - 2rem);
-  max-height: 15.2rem; /* max height size of 304px*/
-  background-size:contain;
-  top:0;
-  left: 0;
-  z-index: -1;
-}
-
-
 
 /* ========================================
 GALLERY SECTION - INDEX
@@ -186,12 +169,9 @@ GALLERY SECTION - INDEX
 	width: 32%;
 }
 
-.gallery img {
+.galleryPics img {
 	height: 100%;
 }
-
-
-
 
 /* ========================================
 ===========================================
@@ -202,7 +182,7 @@ MEDIA QUERIES - Desktop first to mobile
 //responsive design for small desktop screens
 @media (max-width: 940px) {
 
-// === ABOUT ===  //
+  // === ABOUT ===  //
   .about {
     padding: 5rem 0;
   }
@@ -217,18 +197,6 @@ MEDIA QUERIES - Desktop first to mobile
   .flexItem {
     width: 100%;
     padding: 0;
-  }
-
-  .articlePic1 {
-    background-image: url(../assets/left-image.jpg);
-    width:100%;
-    height:100%;
-  }
-
-  .articlePic2 {
-    background-image: url(../assets/right-image.jpg);
-    width:100%;
-    height:100%;
   }
 
   .articleContainers {
@@ -274,26 +242,25 @@ MEDIA QUERIES - Desktop first to mobile
   .aboutItems {
     width: 100%;
   }
-
+  
   .about {
     padding: 4rem 0;
   }
   
-
   .blogPicBackgrounds {
     position: absolute;
   }
+  
   //hostParty section
   .hostParty p {
     margin: 1rem 0;
   }
-
+  
   //GALLERY
-
   .gallery {
     padding: 2.5rem 0;
   }
-
+  
   .galleryPics {
     width: 100%;
     text-align: center;      
@@ -307,21 +274,18 @@ MEDIA QUERIES - Desktop first to mobile
   .about {
     padding: 2.5rem 0;
   }
-
+  
   .eventPic img {
     box-shadow: -0.5rem 0.5rem .1rem $orangeColor;
     height:100%
   }
-
+  
   .eventPic {
     min-width: 100%;
     padding: 1rem 0;
   }
   
-
   .bannerImage {
     background-position: center right;
   }
-  
-  
 }

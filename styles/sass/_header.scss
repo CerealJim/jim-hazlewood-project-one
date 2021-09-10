@@ -3,7 +3,6 @@
 
 header {
   background-repeat: no-repeat;
-  // background-position:top left;
 	background-size:cover;
 	width: 100%;
   height:70vh;
@@ -46,9 +45,9 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 15%;
-
 }
 
+//update <a> tag color to identify page
 .navHome li:first-of-type a {
   color: $orangeColor;
 }

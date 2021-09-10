@@ -2,7 +2,6 @@
 
 .blogBackground {
   background-color: $backgroundColor;
-  // position: relative;
 }
 
 .blogContainer {
@@ -18,14 +17,12 @@
   width: 70%;
 }
 
-
 .asideContainerBackground {
   background-color: $secondaryBackgroundColor;
   margin-top: 6rem;
   padding: 19rem 1.5rem 1.5rem;
   position: relative;
 }
-
 
 .blogAsideImg {
   background-image: url(../assets/sidebar-image.jpg);
@@ -59,7 +56,6 @@
   width: 100%;
 }
 
-
 .newMenuBorder {
   padding: 5rem 5rem 3rem;
   border-left: 0.15rem solid $orangeColor;
@@ -77,7 +73,7 @@
 }
 
 /* ========================================
-BLOG PAGE - BLOG COMMENTS AND FORM
+BLOG COMMENTS AND FORM
 ======================================== */
 
 .blogComments {
@@ -213,47 +209,40 @@ MEDIA QUERIES - Desktop first to mobile
   }
 }
 
-//responsive design for tablets
-@media (max-width: 768px) {
-
-}
-
-
 //responsive design for phones
 @media (max-width: 480px) {
   .asideContainer{
     padding-bottom:1.5rem;
   }
-
+  
   .blogRecentPosts ul li {
     width: 100%;
   }
-
+  
   .newMenuImg {
     box-shadow: -.5rem .5rem #FF8327;
-
   }
-
+  
   .blogComment {
     flex-direction: column;
   }
-
+  
   .commentContent {
     margin-left: 0rem;
   }
-
+  
   .commentPic {
     padding-bottom: 1rem;
     height: 6rem;
     width: 6rem;
   }
-
+  
   .formTop {
     // display:flex;
     flex-direction: column;
     // width: 100%;
   }
-
+  
   .formInput {
     width: 100%;
   }
@@ -262,5 +251,4 @@ MEDIA QUERIES - Desktop first to mobile
   input[type="email"] {
     border: 2px solid $orangeColor;
   }
-
 }
