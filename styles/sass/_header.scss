@@ -137,21 +137,49 @@ MEDIA QUERIES - Desktop first to mobile
     display: contents;
   }
 
+  .nav li:active .subMenu,
+  .nav li:focus-within .subMenu {
+    height: auto;
+  }
+
+  .nav li {
+    position:relative;
+  }
+
+  .subMenu {
+    position:absolute;
+    top:2rem;
+    right: 2rem;
+    overflow: hidden;
+    height: 0;
+  }
+
+  .subMenu li {
+    background-color: $backgroundColor;
+    border: 2px solid $backgroundColor;
+  }
+
   .mobileNav .nav {
+    font-family: $bigHeadingFontFamily;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
   }
 
   .nav a:hover,
   .nav a:focus,
   .nav a:active {
-    border-bottom: none;
+    background-color: none;
+    border:none;
   }
 
-  .nav a {
-    padding: 2rem 0; //20px top and bottom
+  .subMenu a:hover,
+  .subMenu a:focus,
+  .subMenu a:active {
+
+    line-height: normal;
+    border: 1px solid black;
+    color: $orangeColor;;
   }
 
   .headerH1Container {

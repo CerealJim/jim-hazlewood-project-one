@@ -524,7 +524,30 @@ MEDIA QUERIES - Desktop first to mobile
     display: contents;
   }
 
+  .nav li:active .subMenu,
+.nav li:focus-within .subMenu {
+    height: auto;
+  }
+
+  .nav li {
+    position: relative;
+  }
+
+  .subMenu {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    overflow: hidden;
+    height: 0;
+  }
+
+  .subMenu li {
+    background-color: #111010;
+    border: 2px solid #111010;
+  }
+
   .mobileNav .nav {
+    font-family: "Tulpen One", cursive;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -534,17 +557,21 @@ MEDIA QUERIES - Desktop first to mobile
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 0;
   }
 
   .nav a:hover,
 .nav a:focus,
 .nav a:active {
-    border-bottom: none;
+    background-color: none;
+    border: none;
   }
 
-  .nav a {
-    padding: 2rem 0;
+  .subMenu a:hover,
+.subMenu a:focus,
+.subMenu a:active {
+    line-height: normal;
+    border: 1px solid black;
+    color: #FF8327;
   }
 
   .headerH1Container {
