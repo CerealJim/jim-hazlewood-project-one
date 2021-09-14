@@ -620,7 +620,7 @@ ABOUT SECTION - INDEX
   width: 50%;
 }
 
-.aboutItems span:first-child {
+.aboutItems div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
