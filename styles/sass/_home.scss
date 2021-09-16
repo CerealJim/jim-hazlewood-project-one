@@ -1,4 +1,57 @@
 
+/* ========================================
+POPUP MODAL SECTION - INDEX
+======================================== */
+
+html {
+  position:relative;
+}
+
+.homePopUp {
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display:flex;
+  flex-direction: column;
+  justify-content:start;
+  align-items: center;
+}
+
+.homePopUpHidden {
+  display:none;
+}
+
+.homePopUpContent {
+  background-color: $orangeColor;
+  padding: 3rem;
+  margin-top: 20vh;
+  display:flex;
+  flex-direction: column;
+}
+
+.homePopUpClose {
+  font-family: $bigHeadingFontFamily;
+  color: $redColor;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom:2rem;
+  margin-right: -1rem;
+}
+
+.homePopUpClose span {
+  border: 1px solid $primaryFontColor;
+}
+
+.homePopUpClose p span:hover {
+  color: $redColorActive;
+  border: 1px solid $primaryFontColor;
+}
+
+
 
 /* ========================================
 ABOUT SECTION - INDEX
